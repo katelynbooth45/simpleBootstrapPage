@@ -62,7 +62,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: OpenSansCondensed-Bold;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -162,13 +162,12 @@ sup {
 
 a {
   color: #007bff;
-  text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
   color: #0056b3;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:not([href]):not([tabindex]) {
@@ -230,8 +229,11 @@ th {
 }
 
 label {
-  display: inline-block;
+  display: block !important;
   margin-bottom: 0.5rem;
+  display: inline;
+  color: #343a40;
+
 }
 
 button {
@@ -258,6 +260,7 @@ textarea {
 button,
 input {
   overflow: visible;
+  margin-bottom: 2%;
 }
 
 button,
@@ -428,6 +431,13 @@ h6, .h6 {
   line-height: 1.2;
 }
 
+ul, li, a {
+  display: inline;
+  font-size: 25px;
+  padding: 4px;
+  text-decoration: none;
+}
+
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -517,6 +527,13 @@ mark,
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.bordered-box {
+  border-radius: 4px;
+  border: 1px #ddd solid;
+  padding: 5%;
+  width: 50%;
 }
 
 code {
@@ -1835,9 +1852,16 @@ pre code {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+  .bordered-box {
+    width: 90%;
+  }
   .table-responsive-md > .table-bordered {
     border: 0;
   }
+
+  .footer-copyright {
+    text-align: center;
+}
 }
 
 @media (max-width: 991.98px) {
@@ -1889,6 +1913,7 @@ pre code {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-bottom: 2%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2440,10 +2465,11 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
-.btn-primary {
+.btn-primary, input[type=submit] {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
+  border-radius: 0.3rem;
 }
 
 .btn-primary:hover {
@@ -3619,6 +3645,10 @@ input[type="button"].btn-block {
   border-bottom-left-radius: 0;
 }
 
+input:focus {
+  border-color: #80bdff;
+}
+
 .custom-control {
   position: relative;
   display: block;
@@ -4084,6 +4114,7 @@ input[type="button"].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  font-size: 22px !important;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -4198,6 +4229,11 @@ input[type="button"].btn-block {
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+}
+
+.navbar-brand img {
+  width: 30%;
+  display: flex;
 }
 
 .navbar-brand:hover, .navbar-brand:focus {
@@ -4524,6 +4560,7 @@ input[type="button"].btn-block {
 
 .navbar-dark .navbar-brand {
   color: #fff;
+  text-align: center;
 }
 
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {

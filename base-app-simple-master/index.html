@@ -7,11 +7,14 @@
 
     <!-- CSS libraries -->
     <link rel="stylesheet" type='text/css' href="libs/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Assignment 4</a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          <img class="img-responsive logo-img" src="libs/img/logo.png" alt="Logo">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -53,61 +56,83 @@
       <div class="container" id=portfolio>
         <div class="row no-gutters">
           <div class="col-sm">
-            <img class="img-responsive" src="libs/img/1.jpg" alt="Smiley face" width="100%">
+            <img class="img-responsive" src="libs/img/1.jpg" alt="Nature" width="100%">
           </div>
           <div class="col-sm">
-             <img class="img-responsive" src="libs/img/2.jpg" alt="Smiley face" width="100%">
+             <img class="img-responsive" src="libs/img/2.jpg" alt="Nature" width="100%">
           </div>
           <div class="col-sm">
-            <img class="img-responsive" src="libs/img/3.jpg" alt="Smiley face" width="100%">
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-sm">
-            <img class="img-responsive" src="libs/img/4.jpg" alt="Smiley face" width="100%">
-          </div>
-          <div class="col-sm">
-             <img class="img-responsive" src="libs/img/5.jpg" alt="Smiley face" width="100%">
-          </div>
-          <div class="col-sm">
-            <img class="img-responsive" src="libs/img/6.jpg" alt="Smiley face" width="100%">
+            <img class="img-responsive" src="libs/img/3.jpg" alt="Nature" width="100%">
           </div>
         </div>
         <div class="row no-gutters">
           <div class="col-sm">
-            <img class="img-responsive" src="libs/img/7.jpg" alt="Smiley face" width="100%">
+            <img class="img-responsive" src="libs/img/4.jpg" alt="Nature" width="100%">
           </div>
           <div class="col-sm">
-             <img class="img-responsive" src="libs/img/8.jpg" alt="Smiley face" width="100%">
+             <img class="img-responsive" src="libs/img/5.jpg" alt="Nature" width="100%">
           </div>
           <div class="col-sm">
-            <img class="img-responsive" src="libs/img/9.jpg" alt="Smiley face" width="100%">
+            <img class="img-responsive" src="libs/img/6.jpg" alt="Nature" width="100%">
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-sm">
+            <img class="img-responsive" src="libs/img/7.jpg" alt="Nature" width="100%">
+          </div>
+          <div class="col-sm">
+             <img class="img-responsive" src="libs/img/8.jpg" alt="Nature" width="100%">
+          </div>
+          <div class="col-sm">
+            <img class="img-responsive" src="libs/img/9.jpg" alt="Nature" width="100%">
           </div>
         </div>
       </div>
       <div class="container" id="contactUs">
         <div class="centered-div">
-          <form action="https://formspree.io/katelynbooth45@gmail.com" method="POST">
-            <fieldset>
-              <legend>Contact Us:</legend>
-              First name:<br>
-              <input type="text" name="name"><br>
-              Last name:<br>
-              <input type="text" name="lastname"><br>
-              Email Address:<br>
-              <input type="text" name="_replyto"><br><br>
-              <textarea rows="3" cols="60">Reason for contacting us?</textarea>
-              <input type="submit" value="Submit" name="send">
-            </fieldset>
-          </form>
+          <div class="bordered-box">
+            <form action="//formspree.io/katelynbooth45@gmail.com" method="POST">
+              <h2>Contact Us</h2>
+              <!--First Name-->
+              <label for="firstname">First Name</label>
+              <input type="text" id="firstname" name="firstname" placeholder="First Name">
+              <!--Last Name-->
+              <label for="lastname">Last Name</label>
+              <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+              <!--Email Address-->
+              <label for="email">Email Address</label>
+              <input type="text" id="email" name="email" placeholder="Email Address">
+              <!--Phone Number-->
+              <label for="phonenumber">Phone Number</label>
+              <input type="text" id="phonenumber" name="phonenumber" placeholder="Phone Number">
+              <!--Question-->
+              <label for="comment">Comment</label>
+              <textarea class="form-control" rows="5" id="comment" placeholder="Please provide an explanation of your request"></textarea>
+              <!--Submit-->
+              <input type="submit" value="Submit">
+            </form>
           </div>
         </div>
       </div>
     </main>
-    <footer class="py-4 bg-dark text-white-50" id="sticky-footer">
-      <div class="container-fluid text-center text-md-left">
-        <div class="container text-center">
-          <small>Copyright &copy; Katelyn's Homework Assignment 4</small>
+    <footer id="sticky-footer" class=" py-1 bg-dark text-white-50">
+      <div class="container">
+        <div class="row py-4 d-flex align-items-center">
+          <div class="col-md-6 col-lg-5 text-md-left mb-4 mb-md-0">
+            <div class="footer-copyright">
+              <small>Copyright &copy; Katelyn's Homework Assignment 4</small>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-7 text-center text-md-right">
+            <ul>
+              <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+              <li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
+              <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
+              <li><a href="https://www.youtube.com/" class="fa fa-youtube"></a></li>
+              <li><a href="https://www.pinterest.com/" class="fa fa-pinterest"></a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
   <!-- JS includes -->
